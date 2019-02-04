@@ -19,7 +19,11 @@ $ qemu-img create -f qcow2 ANBox.img 1G
     Formatting 'ANBox.img', fmt=qcow2 size=1073741824 cluster_size=65536 lazy_refcounts=off refcount_bits=16
 
 
-$ sudo qemu-system-x86_64 -soundhw es1370 -net nic -net user -cdrom android-x86_64-8.1-r1.iso -hda ANBox.img -boot once=d -m 2048   
+$ sudo qemu-system-x86_64-spice -soundhw es1370 -net nic -net user -cdrom android-x86_64-8.1-r1.iso -hda ANBox.img -boot once=d -m 2048 -enable-kvm -xen-create 
+
+    qemu-system-x86_64-spice: warning: host doesn't support requested feature: CPUID.80000001H:ECX.svm [bit 2]
+
+  
 
 
 
