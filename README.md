@@ -6,13 +6,24 @@ Lo que si es nuevo es la oferta de NETFLIX ilimitado atravez dela red movistar. 
 
 Sabiendo esto; seria possible redirigir mi traffico local atravez de sockets con fin de routear todas los pedidos de mi cel ala red de distribucion de contenido de netflix (CDN) atravez de la red movistar ?????
 
-# implementacion:
+## implementacion:
 
-Tunnel SSH con instancias SSL 
+Android server como Tunnel SSH para instancias SSL 
+
+creamos una instancia android en algun servidor. En este caso un android virtual de 1GB
+
+
+$ qemu-img create -f qcow2 ANBox.img 1G
+
+
+    Formatting 'ANBox.img', fmt=qcow2 size=1073741824 cluster_size=65536 lazy_refcounts=off refcount_bits=16
+
+
+$ sudo qemu-system-x86_64 -soundhw es1370 -net nic -net user -cdrom android-x86_64-8.1-r1.iso -hda ANBox.img -boot once=d -m 2048   
 
 
 
-#netmap
+## netmap
 
 What port does Netflix device streaming use?  Ihe service uses HTTP and HTTPS session protocols (SSL-443) to netflix's CDN. 
 
