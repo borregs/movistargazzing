@@ -15,3 +15,20 @@ Tunnel SSH con instancias SSL
 #netmap
 
 What port does Netflix device streaming use?  Ihe service uses HTTP and HTTPS session protocols (SSL-443) to netflix's CDN. 
+
+Security requirements, control mechanisms, and general architecture
+Netflix concerns, from a security point of view, are:
+
+Only users with the correct (unlimited) plan can access content
+Users don’t share their account information with others
+Videos are only accessible from within the US, due to licensing restrictions
+Video content cannot be redistributed and played at a later time
+Those restrictions are enforced by a set of coordinated mechanisms:
+
+- Request user authentication before playing the video
+- Allow a maximum of six playback devices (browsers, Roku, etc.) per account
+- Reject requests that come from IP addresses outside of the US range
+- Encrypt the video content
+- Provide unique decryption keys per movie and device
+
+file:///home/borregs/Desktop/download.png
