@@ -6,6 +6,11 @@ Lo que si es nuevo es la oferta de NETFLIX ilimitado atravez dela red movistar. 
 
 Sabiendo esto; seria possible redirigir mi traffico local atravez de sockets con fin de routear todas los pedidos de mi cel ala red de distribucion de contenido de netflix (CDN) atravez de la red movistar ?????
 
+# implementacion:
+
+Tunnel SSH con instancias SSL 
+
+
 
 #netmap
 
