@@ -31,4 +31,4 @@ Those restrictions are enforced by a set of coordinated mechanisms:
 - Encrypt the video content
 - Provide unique decryption keys per movie and device
 
-file:///home/borregs/Desktop/download.png
+
