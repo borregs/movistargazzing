@@ -23,7 +23,7 @@ $ sudo qemu-system-x86_64-spice -soundhw es1370 -net nic -net user -cdrom androi
 
     qemu-system-x86_64-spice: warning: host doesn't support requested feature: CPUID.80000001H:ECX.svm [bit 2]
 
-  
+
 
 
 
